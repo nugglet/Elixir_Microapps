@@ -2,10 +2,19 @@
   <h1>Todo List</h1>
 </section>
 
-<section class="phx-hero">
+<section>
   <ol>
     <%= for task <- @tasks do %>
-    <li><%= task.title %></li>
+    <div class="row" style="display: flex; justify-content: space-around, margin-bottom: 1.0rem">
+      <div class="row">
+        <%= checkbox(:task, :done, phx_click: "toggle_done", phx_value_id: task.id, value: task.done) %>
+        <li style="margin: 1.0rem"> 
+          <%= task.title %>
+        </li>
+      </div>
+      
+      <div><button phx-click="delete" phx-value-ref={task.id}>delete</button></div>
+    </div>
     <% end %>
    </ol>
 </section>
