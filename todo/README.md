@@ -1,4 +1,9 @@
 # Todo
+Simple dynamic todo list
+
+![todo list image](img/todo.png)
+
+Main files modified: `/lib/todo/todo_web/controllers`
 
 To start your Phoenix server:
 
