@@ -5,6 +5,12 @@ Simple dynamic todo list
 
 Main files modified: `/lib/todo/todo_web/controllers`
 
+# Quickstart
+
+1. Start the postgres server with `sudo systemctl start postgresql.service`
+2. In a separate terminal, run `mix phx.server` from root
+
+# Setting Up
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
