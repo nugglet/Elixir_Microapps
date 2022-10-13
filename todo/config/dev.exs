@@ -23,7 +23,7 @@ config :todo, TodoWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "KccLAeROD2j1C1ponH9JT5BlZlr1xqt8KRgC/BlgvDo7xQf+OEVjBOb7kqaL2pU0",
+  secret_key_base: "0wBMlxT22yWFTvYEQ6SQZGVy2iQkR29Gw5B683f6Gcm8o+aJbw27FQDHEtgL+esx",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}

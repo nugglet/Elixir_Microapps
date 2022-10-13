@@ -12,13 +12,15 @@ List of Projects:
 - Phoenix Liveview
 - PostgreSQL
 
-> Linux users must install the inotify-tools filesystem watcher
+> Linux users must install the inotify-tools filesystem watcher with `apt-get install inotify-tools`
 
 ## Notes
 
-### Setting up PostGreSQL in Conda
+### Setting up PostGreSQL
 
 > Phoenix assumes that our PostgreSQL database will have a `postgres` user account with the correct permissions and a password of `postgres`
+
+#### In Conda
 
 1. Install postgres: conda install -c anaconda postgresql
 2. create local base db: `initdb -D <basename>`
@@ -38,12 +40,39 @@ psql commands (used with `psql --username=<username>`):
 
 - `dropdb <dbname>`: delete db
 
+#### In Linux
+
+1. Update and install postgres then start the service
+
+```
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+sudo systemctl start postgresql.service
+```
+
+1. Log in to psql. The 'postgres' role is created by default. Modify it to change its password to `postgres`
+
+```
+sudo -i -u postgres
+psql
+/password psql
+/q
+```
+
 ### Setting up a new LiveView project
+
+To install, run:
+```
+mix local.hex
+mix archive.install hex phx_new
+```
 
 1. To create a new Phoenix application run `mix phx.new <appname>`
 
 PostgreSQL is used by default. MySQL, MSSQL, or SQLite3 can be used by passing the `--database` flag when creating a new application. The `--no-ecto` flag can be used to disable ecto, the elixir package that talks to databases.
-2. cd into project dir and run `mix ecto.create`
+2. `cd` into project dir and run `mix ecto.create` to create db
+3. Start server with `mix phx.server`
+4. Generate and migrate the schema with `mix phx.gen.context` and `mix ecto.migrate`
 
 ## Learning Resources
 
