@@ -5,10 +5,12 @@ This repository is a collection of small elixir applications.
 List of Projects:
 
 1. [To-Do List](https://github.com/nugglet/Elixir_Microapps/tree/main/todo)
+2. [Light Switch](https://github.com/nugglet/Elixir_Microapps/tree/main/lightswitch)
 
 ## General Dependencies
 
 - Elixir V1.14
+- Phoenix V1.6.14
 - Phoenix Liveview
 - PostgreSQL
 
@@ -77,3 +79,6 @@ PostgreSQL is used by default. MySQL, MSSQL, or SQLite3 can be used by passing t
 ## Learning Resources
 
 - [Installing PostGreSQL with Anaconda](https://gist.github.com/gwangjinkim/f13bf596fefa7db7d31c22efd1627c7a)
+- [Lifecycle of a Phoenix LiveView](https://pragmaticstudio.com/tutorials/the-life-cycle-of-a-phoenix-liveview)
+- [Light Switch with Phoenix LiveView](https://pragmaticstudio.com/tutorials/getting-started-with-phoenix-liveview)
+- [To-Do List with Phoenix LiveView](https://dennisbeatty.com/how-to-create-a-todo-list-with-phoenix-liveview/)
