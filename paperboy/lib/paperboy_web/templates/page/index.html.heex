@@ -1,0 +1,24 @@
+<%= if @current_user do %>
+  <section class="phx-hero">
+    <p>paper here</p>
+  </section>
+
+<% else %>
+  <section class="phx-hero">
+    <h1><%= gettext "Hi! I'm your %{name}!", name: "Paperboy" %></h1>
+    <p>A paper a day keeps the stupid away</p>
+  </section>
+
+  <section class="column">
+    <article class="column">
+      <h2>Keep up to date with the latest research papers</h2>
+      <p>img here</p>
+    </article>
+    <article class="column">
+      <h2>Log in and save your favourite papers</h2>
+      <p>more img here</p>
+    </article>
+  </section>
+<% end %>
+
+
